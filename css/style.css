@@ -1,12 +1,45 @@
-body{
+body {
     font-family: Arial, Helvetica, sans-serif;
+    margin: 0;
+    padding: 0;
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh;
+    /*height: 100vh;*/
 }
-
 
 h2{
     color:rgb(53, 53, 57);
+    padding: 20px;
+
+    font-weight: lighter; /* Set the font weight to lighter */
+    font-size: 24px; /* Adjust the font size as needed */
 }
 
-h3{
-    color:rgb(64, 50, 50);
+h3 {
+    color: rgb(64, 50, 50);
+    /*border: 2px solid black; /* Add this line to create a border */
+
+    padding-left: 20px; /* Add left padding */
+    padding-right: 20px; /* Add right padding */
+    padding-top: 0; /* No top padding */
+    padding-bottom: 0; /* No bottom padding */
+
+    font-weight: lighter; /* Set the font weight to lighter */
+    font-size: 18px; /* Adjust the font size as needed */
+}
+
+.logo {
+    max-width: 100%;
+    margin: 0 auto;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+footer {
+    background-color: #f1f1f1;
+    padding: 20px;
+    text-align: center;
+    margin-top: auto;
 }
