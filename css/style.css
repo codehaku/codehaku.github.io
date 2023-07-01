@@ -11,7 +11,7 @@ body {
 h2{
     color:rgb(53, 53, 57);
     padding: 20px;
-
+    text-align: center;
     font-weight: lighter; /* Set the font weight to lighter */
     font-size: 24px; /* Adjust the font size as needed */
 }
@@ -24,7 +24,7 @@ h3 {
     padding-right: 20px; /* Add right padding */
     padding-top: 0; /* No top padding */
     padding-bottom: 0; /* No bottom padding */
-
+    text-align: center;
     font-weight: lighter; /* Set the font weight to lighter */
     font-size: 18px; /* Adjust the font size as needed */
 }
