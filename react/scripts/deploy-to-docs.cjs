@@ -30,5 +30,11 @@ function copyDir(src, dest) {
 }
 
 copyDir(buildDir, docsDir);
-console.log("React build copied to ../docs");
+// Prevent GitHub Pages from running Jekyll on the React build
+const noJekyllPath = path.join(docsDir, ".nojekyll");
+if (!fs.existsSync(noJekyllPath)) {
+  fs.writeFileSync(noJekyllPath, "");
+}
+
+console.log("React build copied to ../docs (with .nojekyll)");
 
