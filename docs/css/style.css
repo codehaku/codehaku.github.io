@@ -44,3 +44,76 @@ footer {
     text-align: center;
     margin-top: auto;
 }
+
+/* Inquiry Section Styles */
+.inquiry-section {
+    padding: 30px 20px;
+    background-color: #f9f9f9;
+    text-align: center;
+    margin: 20px auto;
+    max-width: 600px;
+}
+
+.inquiry-section h2 {
+    color: rgb(53, 53, 57);
+    padding: 10px 0;
+    font-size: 24px;
+    margin: 0;
+}
+
+.inquiry-section > p {
+    color: rgb(64, 50, 50);
+    margin-bottom: 20px;
+    font-size: 16px;
+}
+
+.inquiry-form {
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+    text-align: left;
+}
+
+.form-group {
+    display: flex;
+    flex-direction: column;
+    gap: 5px;
+}
+
+.form-group label {
+    font-weight: bold;
+    color: rgb(53, 53, 57);
+    font-size: 14px;
+}
+
+.form-group input,
+.form-group textarea {
+    padding: 10px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    font-size: 14px;
+    width: 100%;
+    box-sizing: border-box;
+}
+
+.form-group textarea {
+    resize: vertical;
+    min-height: 100px;
+}
+
+.submit-btn {
+    background-color: #007bff;
+    color: white;
+    border: none;
+    padding: 12px 24px;
+    font-size: 16px;
+    border-radius: 4px;
+    cursor: pointer;
+    width: 100%;
+    margin-top: 10px;
+    transition: background-color 0.3s;
+}
+
+.submit-btn:hover {
+    background-color: #0056b3;
+}
