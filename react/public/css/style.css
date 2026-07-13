@@ -1,119 +1,223 @@
-body {
-    font-family: Arial, Helvetica, sans-serif;
+/* ===== RESET & BASE ==== */
+* {
     margin: 0;
     padding: 0;
+    box-sizing: border-box;
+}
+
+:root {
+    --primary: #2563eb;
+    --primary-dark: #1d4ed8;
+    --secondary: #64748b;
+    --light: #f8fafc;
+    --dark: #1e293b;
+    --gray: #94a3b8;
+    --white: #ffffff;
+    --border: #e2e8f0;
+    --shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.1), 0 2px 4px -1px rgba(0, 0, 0, 0.06);
+    --shadow-lg: 0 10px 15px -3px rgba(0, 0, 0, 0.1), 0 4px 6px -2px rgba(0, 0, 0, 0.05);
+    --radius: 12px;
+    --radius-sm: 8px;
+}
+
+body {
+    font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, 'Helvetica Neue', Arial, sans-serif;
+    line-height: 1.6;
+    color: var(--dark);
+    background-color: var(--white);
+    min-height: 100vh;
     display: flex;
     flex-direction: column;
-    min-height: 100vh;
-    /*height: 100vh;*/
 }
 
-h2{
-    color:rgb(53, 53, 57);
-    padding: 20px;
+/* ===== HEADER ==== */
+header {
+    padding: 40px 0;
     text-align: center;
-    font-weight: lighter; /* Set the font weight to lighter */
-    font-size: 24px; /* Adjust the font size as needed */
-}
-
-h3 {
-    color: rgb(64, 50, 50);
-    /*border: 2px solid black; /* Add this line to create a border */
-
-    padding-left: 20px; /* Add left padding */
-    padding-right: 20px; /* Add right padding */
-    padding-top: 0; /* No top padding */
-    padding-bottom: 0; /* No bottom padding */
-    text-align: center;
-    font-weight: lighter; /* Set the font weight to lighter */
-    font-size: 18px; /* Adjust the font size as needed */
+    background: linear-gradient(135deg, var(--light) 0%, var(--white) 100%);
 }
 
 .logo {
-    max-width: 300px;
+    max-width: 280px;
     width: 100%;
+    margin: 0 auto 24px;
+    display: block;
+    transition: transform 0.3s ease;
+}
+
+.logo:hover {
+    transform: scale(1.02);
+}
+
+header h2 {
+    font-size: 2.5rem;
+    font-weight: 700;
+    color: var(--dark);
+    margin-bottom: 16px;
+    letter-spacing: -0.02em;
+}
+
+header h3 {
+    font-size: 1.125rem;
+    color: var(--secondary);
+    max-width: 700px;
     margin: 0 auto;
-    display: flex;
-    justify-content: center;
-    align-items: center;
+    font-weight: 400;
+    line-height: 1.7;
 }
 
-footer {
-    background-color: #f1f1f1;
-    padding: 20px;
-    text-align: center;
-    margin-top: auto;
-}
-
-/* Inquiry Section Styles */
+/* ===== INQUIRY SECTION ==== */
 .inquiry-section {
-    padding: 30px 20px;
-    background-color: #f9f9f9;
-    text-align: center;
-    margin: 20px auto;
-    max-width: 600px;
+    padding: 60px 0;
+    background-color: var(--white);
+}
+
+.inquiry-container {
+    max-width: 580px;
+    margin: 0 auto;
+    padding: 40px;
+    background: var(--white);
+    border-radius: var(--radius);
+    box-shadow: var(--shadow-lg);
+    border: 1px solid var(--border);
 }
 
 .inquiry-section h2 {
-    color: rgb(53, 53, 57);
-    padding: 10px 0;
-    font-size: 24px;
-    margin: 0;
+    font-size: 1.75rem;
+    font-weight: 700;
+    color: var(--dark);
+    margin-bottom: 12px;
+    text-align: center;
 }
 
 .inquiry-section > p {
-    color: rgb(64, 50, 50);
-    margin-bottom: 20px;
-    font-size: 16px;
+    color: var(--secondary);
+    font-size: 1rem;
+    text-align: center;
+    margin-bottom: 32px;
+    line-height: 1.6;
 }
 
 .inquiry-form {
     display: flex;
     flex-direction: column;
-    gap: 15px;
-    text-align: left;
+    gap: 20px;
 }
 
 .form-group {
     display: flex;
     flex-direction: column;
-    gap: 5px;
+    gap: 8px;
 }
 
 .form-group label {
-    font-weight: bold;
-    color: rgb(53, 53, 57);
-    font-size: 14px;
+    font-size: 0.875rem;
+    font-weight: 600;
+    color: var(--dark);
+    text-transform: uppercase;
+    letter-spacing: 0.05em;
 }
 
 .form-group input,
 .form-group textarea {
-    padding: 10px;
-    border: 1px solid #ccc;
-    border-radius: 4px;
-    font-size: 14px;
-    width: 100%;
-    box-sizing: border-box;
+    padding: 14px 16px;
+    border: 2px solid var(--border);
+    border-radius: var(--radius-sm);
+    font-size: 1rem;
+    font-family: inherit;
+    transition: all 0.2s ease;
+    background-color: var(--white);
+}
+
+.form-group input:focus,
+.form-group textarea:focus {
+    outline: none;
+    border-color: var(--primary);
+    box-shadow: 0 0 0 3px rgba(37, 99, 235, 0.1);
 }
 
 .form-group textarea {
     resize: vertical;
-    min-height: 100px;
+    min-height: 120px;
 }
 
+/* ===== BUTTON ==== */
 .submit-btn {
-    background-color: #007bff;
-    color: white;
+    background: linear-gradient(135deg, var(--primary) 0%, var(--primary-dark) 100%);
+    color: var(--white);
     border: none;
-    padding: 12px 24px;
-    font-size: 16px;
-    border-radius: 4px;
+    padding: 16px 24px;
+    font-size: 1rem;
+    font-weight: 600;
+    border-radius: var(--radius-sm);
     cursor: pointer;
     width: 100%;
-    margin-top: 10px;
-    transition: background-color 0.3s;
+    margin-top: 8px;
+    transition: all 0.3s ease;
+    text-transform: uppercase;
+    letter-spacing: 0.05em;
+    box-shadow: var(--shadow);
 }
 
 .submit-btn:hover {
-    background-color: #0056b3;
+    transform: translateY(-2px);
+    box-shadow: 0 6px 12px -2px rgba(37, 99, 235, 0.3);
+}
+
+.submit-btn:active {
+    transform: translateY(0);
+}
+
+/* ===== FOOTER ==== */
+footer {
+    padding: 32px 0;
+    text-align: center;
+    background-color: var(--dark);
+    color: var(--gray);
+    margin-top: auto;
+}
+
+footer p {
+    font-size: 0.875rem;
+}
+
+/* ===== RESPONSIVE ==== */
+@media (max-width: 768px) {
+    header {
+        padding: 32px 0;
+    }
+    
+    header h2 {
+        font-size: 2rem;
+    }
+    
+    header h3 {
+        font-size: 1rem;
+        padding: 0 16px;
+    }
+    
+    .logo {
+        max-width: 240px;
+    }
+    
+    .inquiry-container {
+        padding: 32px 20px;
+        margin: 0 16px;
+    }
+}
+
+/* ===== ANIMATIONS ==== */
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+        transform: translateY(20px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+.inquiry-container {
+    animation: fadeIn 0.6s ease-out;
 }

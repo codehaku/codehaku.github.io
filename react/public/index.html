@@ -10,33 +10,30 @@
 <h1></h1>
 <body>
     <header>
-    <img src="images/Logo_conf2.png" alt="ceylonsys labs logo" class="logo">
+        <img src="images/Logo_conf2.png" alt="ceylonsys labs logo" class="logo">
         <h2>Welcome to Ceylonsys Labs!</h2>
-            <h3> Our website is currently under construction, but we're working diligently to bring you an engaging online experience soon.
-                Stay tuned for the launch of our website, where you'll find 
-                more information about our services, solutions and how we 
-                can help your business thrive in the digital age.
-                Thank you for your patience and we look forward to 
-                connecting with you soon.</h3>
-    </header> 
+        <h3>Our website is currently under construction, but we're working diligently to bring you an engaging online experience soon. Stay tuned for the launch of our website, where you'll find more information about our services, solutions and how we can help your business thrive in the digital age. Thank you for your patience and we look forward to connecting with you soon.</h3>
+    </header>
     <section class="inquiry-section">
-        <h2>Need More Info?</h2>
-        <p>Have questions about our services? Fill out the form below and we'll get back to you shortly.</p>
-        <form class="inquiry-form" action="mailto:info@ceylonsys.lk" method="post" enctype="text/plain">
-            <div class="form-group">
-                <label for="name">Name:</label>
-                <input type="text" id="name" name="name" required>
-            </div>
-            <div class="form-group">
-                <label for="email">Email:</label>
-                <input type="email" id="email" name="email" required>
-            </div>
-            <div class="form-group">
-                <label for="message">Message:</label>
-                <textarea id="message" name="message" rows="4" required></textarea>
-            </div>
-            <button type="submit" class="submit-btn">Send Inquiry</button>
-        </form>
+        <div class="inquiry-container">
+            <h2>Need More Info?</h2>
+            <p>Have questions about our services? Fill out the form below and we'll get back to you shortly.</p>
+            <form class="inquiry-form" action="mailto:info@ceylonsys.lk" method="post" enctype="text/plain">
+                <div class="form-group">
+                    <label for="name">Name</label>
+                    <input type="text" id="name" name="name" required placeholder="Your name">
+                </div>
+                <div class="form-group">
+                    <label for="email">Email</label>
+                    <input type="email" id="email" name="email" required placeholder="your@email.com">
+                </div>
+                <div class="form-group">
+                    <label for="message">Message</label>
+                    <textarea id="message" name="message" rows="4" required placeholder="Tell us about your project..."></textarea>
+                </div>
+                <button type="submit" class="submit-btn">Send Inquiry</button>
+            </form>
+        </div>
     </section>
     <footer>
         <p>&copy; 2023 Ceylonsys Labs. All rights reserved.</p>
